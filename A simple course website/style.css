@@ -22,7 +22,7 @@ h6 {
 }
 
 
-p, li, a {
+p, li, a, label {
     font-family: "Urbanist", sans-serif;
     font-size: 1.8rem;
     letter-spacing: 0.1;
@@ -89,7 +89,8 @@ list-style: none;
     .section-contact,
     .section-course,
     .section-why--choose,
-    .section-contact--homepage
+    .section-contact--homepage,
+    .section-contact
   )
   .container:first-child {
     padding: 6.4rem 0 2.4rem 0;
@@ -171,12 +172,15 @@ list-style: none;
 /***** End Main Div Section *****/
 
 
+
+
+
 /***** navbar Section *****/
 
 .section-navbar {
     width: 100%;
-    box-shadow:  0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px ;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .section-navbar .container {
@@ -481,6 +485,68 @@ z-index: -1;
 
 
 
+
+
+
+/***** Actual Contact Page Section *****/
+
+.section-contact {
+    & .grid {
+        gap: 6.4rem;
+        align-items: center;
+    }
+}
+
+
+.mb-3 {
+    margin-bottom: 3.2rem;
+}
+
+label {
+    display: block;
+    text-transform: capitalize;
+}
+
+
+.contact-content .grid {
+    gap: 6.4rem;
+}
+
+
+input, textarea {
+    width: 100%;
+    padding: 1.4rem 2.4rem;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+}
+
+::placeholder {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+
+}
+
+.btn-submit {
+    font-size: 1.8rem;
+    border: none;
+    text-transform: capitalize;
+}
+
+input:focus-visible, textarea:focus-visible {
+   outline: .1rem solid var(--main-color);
+}
+
+
+/***** End Actual Contact Page Section *****/
+
+
+
+
+
+
+
+
+
 /***** contact home  Section *****/
 
 .section-contact--homepage {
@@ -491,9 +557,15 @@ z-index: -1;
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     margin-bottom: 5rem;
     border-radius: 0.2rem;
+    padding: 0 3.2rem;
+    background-color: var(--white-color);
+    position: relative;
+    bottom: -15rem;
+    z-index: 1;
 
     & .grid {
         align-items: center;
+        gap: 6.4rem;
     }
 }
 
@@ -526,3 +598,161 @@ z-index: -1;
 }
 
 /***** End contact home  Section *****/
+
+
+
+
+
+/***** Blog Section *****/
+
+
+.section-blog {
+    background-color: var(--bg-color);
+
+
+    & .grid {
+        gap: 6.4rem;
+    }
+
+    & .blog {
+        box-shadow: var(--btn-box-shadow);
+        transition: scale 0.3s linear;
+
+        &:hover {
+            scale: 1.1;
+        }
+
+
+        & .blog-content {
+            padding: 1.4rem 2.4rem 2.4rem;
+        }
+   
+    }
+
+   & img {
+        width: 100%;
+        height: auto;
+    }
+
+    & .blog-date {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.6rem;
+        font-size: 1.4rem;
+    }
+
+    & .fa-solid {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    & .section-common--title {
+        margin-top: 0.8rem;
+    }
+}
+
+
+
+
+
+/***** End Blog Section *****/
+
+
+
+
+
+
+
+/***** Footer Section *****/
+
+footer {
+    background-color: var(--footer-bg-color);
+    padding-top: 15rem;
+}
+
+footer * {
+    color: var(--white-color);
+}
+
+footer .grid {
+    text-align: right;
+}
+
+.footer-subheading {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.footer-1--div p {
+    margin: 1rem 0 3.2rem 0;
+}
+
+.footer-1--div {
+    text-align: left;
+
+
+    & .social-footer--icons {
+        display: flex;
+        gap: 2.4rem;
+    }
+
+    & .fa-brands {
+        width: 5rem;
+        aspect-ratio: 1;
+        background-color: var(--supporting-color);
+        color: var(--bnt-hover-bg-color);
+        border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s linear;
+      
+
+
+      &:hover {
+        color: var(--supporting-color);
+        background-color: var(--bnt-hover-bg-color);
+        rotate: 360deg;
+
+      }
+
+    }
+}
+
+/***** End Footer Section *****/
+
+
+
+
+
+/***** scrollbar Section *****/
+
+/* width */
+::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--supporting-color);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--heading-color);
+  }
+  
+  /***** End scrollbar Section *****/
+
+
+
+
+
+
+
